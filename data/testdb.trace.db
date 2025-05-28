@@ -1,0 +1,10 @@
+2025-05-28 21:30:45.520056+03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "STUDENT" not found (this database is empty); SQL statement:
+select s1_0.id,s1_0.nume from student s1_0 where s1_0.id=? [42104-224]
+2025-05-28 21:30:58.300540+03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "STUDENT" not found (this database is empty); SQL statement:
+insert into student (nume,id) values (?,default) [42104-224]
+2025-05-28 21:33:43.730465+03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-224]
+2025-05-28 21:33:47.062972+03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-224]
