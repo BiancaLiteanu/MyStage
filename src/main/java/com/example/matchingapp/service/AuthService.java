@@ -15,15 +15,16 @@ public class AuthService {
     }
 
     public String autentificare(LoginRequest loginRequest) {
-        Utilizator user = utilizatorRepository.findByUsername(loginRequest.getUsername());
+        // 🔁 Căutare după EMAIL
+        Utilizator user = utilizatorRepository.findByEmail(loginRequest.getEmail());
 
         if (user != null && user.getParola().equals(loginRequest.getParola())) {
             return "Login reușit ca " + user.getRol();
         } else {
-            return "Username sau parolă greșită!";
+            return "Email sau parolă greșită!";
         }
-
     }
+
     public String register(Utilizator utilizator) {
         if (utilizatorRepository.findByUsername(utilizator.getUsername()) != null) {
             return "Username deja există!";
@@ -32,5 +33,4 @@ public class AuthService {
         utilizatorRepository.save(utilizator);
         return "Utilizator înregistrat cu succes!";
     }
-
 }

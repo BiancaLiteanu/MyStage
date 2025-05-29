@@ -3,25 +3,19 @@ package com.example.matchingapp.model;
 import jakarta.persistence.*;
 
 @Entity
-public class Utilizator {
+public class Recruiter {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String username;
+    private String nume;
 
     private String email;
 
     private String parola;
 
-    private String rol; // "STUDENT" sau "RECRUITER"
-
-
-    public Utilizator() {}
-
-    // Getters & Setters
-
+    // Getters și Setters
     public Long getId() {
         return id;
     }
@@ -30,12 +24,12 @@ public class Utilizator {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getNume() {
+        return nume;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setNume(String nume) {
+        this.nume = nume;
     }
 
     public String getEmail() {
@@ -53,14 +47,4 @@ public class Utilizator {
     public void setParola(String parola) {
         this.parola = parola;
     }
-
-    public String getRol() {
-        return rol;
-    }
-
-    public void setRol(String rol) {
-        this.rol = rol;
-    }
-
-
 }
